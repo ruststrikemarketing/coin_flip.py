@@ -1,0 +1,36 @@
+import random
+
+def coin_flip():
+    # Generate a random number (0 or 1) to represent heads or tails
+    result = random.randint(0, 1)
+    if result == 0:
+        return "Heads"
+    else:
+        return "Tails"
+
+def main():
+    print("Welcome to the Coin Flip Game!")
+    print("-----------------------------")
+
+    # Prompt for the number of flips
+    num_flips = int(input("Enter the number of coin flips: "))
+
+    # Perform the coin flips
+    heads_count = 0
+    tails_count = 0
+
+    for _ in range(num_flips):
+        flip_result = coin_flip()
+        if flip_result == "Heads":
+            heads_count += 1
+        else:
+            tails_count += 1
+
+    # Display the results
+    print("-----------------------------")
+    print("Results:")
+    print("Heads:", heads_count)
+    print("Tails:", tails_count)
+
+if __name__ == '__main__':
+    main()
